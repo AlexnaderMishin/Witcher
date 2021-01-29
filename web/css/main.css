@@ -1,0 +1,10 @@
+.bunnter{
+    width: 10   0%;
+    height: 50em;
+    border: 1px solid white;
+}
+
+.carousel-indicators, .carousel-item, .carousel-caption {
+max-height: 70%;
+}
+
