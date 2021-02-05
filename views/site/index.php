@@ -5,57 +5,67 @@
 $this->title = 'Tavern';
 
 $this->registerCssFile("/web/css/main.css");
-
 ?>
-
-
 <div class="row">
-
-<!-- карусель -->
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/web/uploads/wight.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/web/uploads/post5.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
-
-
-
-
-<!-- конец карусели -->
+<!-- Главный блок с описанием -->
+<div class="home-block">
+	<div class="desk-block">
+		<h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px;">THE <span class="redWord" style="color: red">WITCHER</span></h1>
+		<p class="desk-seria" style="color: white" font-size: 18px;>Геральт из Ривии мутировавший охотник на монстров по<br> найму, отправляется навстречу своей судьбе в неспокойном<br> мире, где люди часто оказываются более злыми, чем звери.</p><br>
+		<p class="desk-cast" style="color: white" font-size: 18px;>В ролях: Генри Кавилл, Аня Чалотра, Фрейа Аллан</p>
+		<p class="desk-cast" style="color: white" font-size: 18px;>Создатели: Лорен Шмидт Хисрич</p>
+		<button type="button" class="btn btn-danger">СМОТРЕТЬ ОНЛАЙН</button>
+	</div>
 </div>
+<!-- конец главного блока -->
+
+
+<!-- Блок с сериалом -->
+<div class="seria-block">
+	<p style="font-size: 24px; color: white;">Эпизоды | Ведьмак</p>
+	<p style="font-size: 18px; color: white;">1 сезон</p>
+	<!-- блок серии -->
+	<div class="row">
+	<div class="card" style="width: 35rem;">
+  		<img class="card-img-top" src="/web/uploads/post5.jpg" alt="image">
+  		<div class="card-body">
+    	<h5 class="card-title">1. Начало Конца</h5>
+    	<p class="card-text">Враждебные горожане и хитрая ведьма встречают Геральта в Блавикене. Цири выясняет, что ее королевство рушится, потому что Нильфгаард решает завоевать Цинтру.</p>
+    	
+  		</div>
+	</div>
+	<div class="card" style="width: 35rem;">
+  		<img class="card-img-top" src="/web/uploads/yen1.jpg" alt="image">
+  		<div class="card-body">
+    	<h5 class="card-title">1. Начало Конца</h5>
+    	<p class="card-text">Враждебные горожане и хитрая ведьма встречают Геральта в Блавикене. Цири выясняет, что ее королевство рушится, потому что Нильфгаард решает завоевать Цинтру.</p>
+    	
+  		</div>
+	</div>
+	<div class="card" style="width: 35rem;">
+  		<img class="card-img-top" src="/web/uploads/renfri.jpg" alt="image">
+  		<div class="card-body">
+    	<h5 class="card-title">1. Начало Конца</h5>
+    	<p class="card-text">Враждебные горожане и хитрая ведьма встречают Геральта в Блавикене. Цири выясняет, что ее королевство рушится, потому что Нильфгаард решает завоевать Цинтру.</p>
+    	
+  		</div>
+	</div>
+	<div class="card" style="width: 35rem;">
+  		<img class="card-img-top" src="/web/uploads/ger1.jpg" alt="image">
+  		<div class="card-body">
+    	<h5 class="card-title">1. Начало Конца</h5>
+    	<p class="card-text">Враждебные горожане и хитрая ведьма встречают Геральта в Блавикене. Цири выясняет, что ее королевство рушится, потому что Нильфгаард решает завоевать Цинтру.</p>
+    	
+  		</div>
+	</div>
+
+	</div>
+
+</div>
+<!-- Конец блока с сериалом -->
+</div>
+
+
 
 
 

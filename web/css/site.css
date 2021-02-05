@@ -1,36 +1,82 @@
-body{
-    background-color: #1B1C1E;
-}
-.navbar-main{
-    /* width: 100%; */
+ body{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: #2D3436;
+} 
+
+.navbar-main{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
     height: 60px;
-    background-color: black;
+    background-color:rgb(255,255,255,0);
 }
 /* Навгация */
 .nav{
     margin-top: 10px;
+
 }
 .navbar-brand{
     margin-top: -10px;
+    
+
 }
-.nav-link{
-   
-    color: white;
+.nav-link{    
+    color: #DFE4EA;
     text-decoration: none;
     transition:all 0.3s ease-out;
    
 }
+    
+
 .nav-link:hover{
-    color: white;
+    color: red;
     text-decoration: none;
-    border-bottom: 1px solid white;
-    transition:0.5s ease-in-out;
-    letter-spacing: 1px;
-        
-   
+    transition:0.5s ease-in-out;   
 }
 label{
     color: white;
 }
+.home-block{
+    width: 100vw; 
+    height: 100vh; 
+    background-color: #2D3436;
+    background-image: url(/web/uploads/back.png);
+    /*opacity: 0.5;*/
+    
+    background-blend-mode: color-dodge;
+
+}
+.desk-block{
+   /* width: 100%;
+    height: 15em;*/
+    margin-left: 40px;
+    margin-top: calc(100% - 80%);
+}
+
+.desk-block button{
+    margin-top: 10px;
+    width: 220px;
+}
+.seria-block{
+    margin: 0 auto;
+    margin-top: 50px;
+    /*margin-left: 5%;*/
+
+}
+.card{
+    margin-left: 50px;
+    margin-top: 20px;
+    /*margin-left: 50px;*/
+    background-color:rgb(255,255,255,0);
+    border: none;
+    color: white;
+}
+.card img{
+    width: 380px;
+    height: 200px;
+}
+
 
 /* Главная страница */
