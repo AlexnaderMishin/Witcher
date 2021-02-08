@@ -1,0 +1,11 @@
+.control-block{
+margin: 0 auto;
+margin-top: 5%;	
+}
+
+.news, .seria{
+	display: inline-block;
+	width: 500px;
+	height: 400px;
+	background-color: #F1F2F6;
+}

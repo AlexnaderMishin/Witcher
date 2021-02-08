@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignUp;
 use app\models\Posts;
+use app\models\Films;
 
 class SiteController extends Controller
 {
@@ -63,7 +64,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $film = films::find()->all();
+        return $this->render('index', [
+        'seria' => $film,
+    ]);
+        
     }
 
     /**
@@ -151,5 +156,6 @@ public function actionNews(){
         'request' => $requests,
     ]);
 }
+
 
 }

@@ -32,10 +32,11 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="container-fluid">
-    <?= $content ?>
+<!-- <div class="row"> -->
+<?= $content ?>
 <!-- navbar -->
 <div class="navbar-main">
-<div class="container-fluid">
+
 <div class="row">
 <div class="col-sm">
 <!-- Логотип -->
@@ -43,7 +44,7 @@ AppAsset::register($this);
       <img src="/web/uploads/Logobird.png" alt="" width="45" height="46">
     </a>
 <?php
-if(!Yii::$app->user->isGuest){
+if(Yii::$app->user->identity->admin == 0){
 echo '
 <ul class="nav">
 
@@ -54,11 +55,17 @@ echo '
 
 
 <a class="nav-link" href="#">Анимации</a>
-
 </ul>
 ';
+}else{
+    echo '
+<ul class="nav">
+<a class="nav-link" aria-current="page" href="#">Сериал</a>
+<a class="nav-link" href="'.Url::toRoute('site/news').'">Новости</a>
+<a class="nav-link" href="#">Анимации</a>
+</ul>
+    ';
 }
-
 ?>
 </div>
 <div class="col-sm">
@@ -72,9 +79,23 @@ echo'
 
 ';
 }else{
+    if(Yii::$app->user->identity->admin == 1){
     echo'
-   
-  <li class="nav-item">'
+    <a class="btn btn-outline-danger" href="'.Url::toRoute('admin/index').'">Админ панель</a>
+    <li class="nav-item">'
+
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Выход (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-outline-danger']
+                )
+                . Html::endForm()
+                . '</li>
+    ';
+    }else{
+    echo'
+    <li class="nav-item">'
+
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
                     'Выход (' . Yii::$app->user->identity->username . ')',
@@ -84,21 +105,21 @@ echo'
                 . '</li>
     ';
 }
+}
 ?>
-
-  
-  
 </ul>
 </div> 
-</div>
+
 
 </div>
 </div>
+<!-- </div> -->
 
 </div>
+
 <?php $this->endBody() ?>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
