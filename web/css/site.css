@@ -1,13 +1,14 @@
  body{
     margin: 0 auto;
     padding: 0 auto;
-    background-color: #2D3436;
+    background-color: #303030;
 } 
 /*.container-fluid{
     width: 100vw;
     margin: 0;
     padding: 0;
 }*/
+
 .navbar-main{ 
     position: fixed;
     top: 0;
@@ -47,11 +48,13 @@ label{
 .home-block{
     width: 100vw; 
     height: 100vh; 
-    background-color: #2D3436;
+    background-color: #303030;
     background-image: url(/web/uploads/back.png);
+    background-attachment: fixed;
     /*opacity: 0.5;*/
     
     background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
 
 }
 .desk-block{
@@ -65,31 +68,12 @@ label{
     margin-top: 10px;
     width: 220px;
 }
-.seria-block{
-    
-margin: 0 auto;
-margin-top: 50px;
-}
+
 
 h1,p{
     color: white;
 }
 
 /* Главная страница */
-.cart{
-    max-width: 380px;
-    
-    margin-top: 20px;
-    margin-left: 50px;
-    background-color:rgb(255,255,255,0);
-    border: none;
-    color: white;
-}
-.cart img{
-    width: 380px;
-    height: 200px; 
-}
 
-.row{
-    /*margin: 0 auto;*/
-}
+

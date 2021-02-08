@@ -17,5 +17,8 @@ $this->title = 'Admin-board';
 <div class="seria">
 <p style="color: black; font-size: 24px;">Сериал</p>
 <a href="<?php echo Url::toRoute('films/create'); ?>">Загрузить серию</a>
-</div>	
+</div>
+
+
+
 </div>

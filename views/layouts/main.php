@@ -41,7 +41,7 @@ AppAsset::register($this);
 <div class="col-sm">
 <!-- Логотип -->
 <a class="navbar-brand" href="<?php echo Url::home();?>">
-      <img src="/web/uploads/Logobird.png" alt="" width="45" height="46">
+      <img class="icon" src="/web/uploads/Logobird.png" alt="" width="45" height="46">
     </a>
 <?php
 if(Yii::$app->user->identity->admin == 0){
