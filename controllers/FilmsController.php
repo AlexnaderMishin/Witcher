@@ -9,8 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-use yii\widgets\ActiveForm;
 use app\models\UploadForm;
+
 
 /**
  * FilmsController implements the CRUD actions for Films model.
@@ -65,8 +65,7 @@ class FilmsController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-
-    public function actionCreate()
+   public function actionCreate()
     {
         $model = new Films();
         if(Yii::$app->request->isPost){

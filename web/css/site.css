@@ -1,7 +1,15 @@
+@font-face {
+font-family: 'masson';
+src: url("/web/assets/497bc4fb/fonts/mason/masson.woff") format('truetype');
+src: url("/web/assets/497bc4fb/fonts/mason/masson.ttf") format('truetype');
+src: url("/web/assets/497bc4fb/fonts/mason/masson.eot") format('truetype');
+ font-style: normal;
+ font-weight: normal;
+}
  body{
     margin: 0 auto;
     padding: 0 auto;
-    background-color: #303030;
+    background-color: #181818;
 } 
 /*.container-fluid{
     width: 100vw;
@@ -46,13 +54,14 @@ label{
     color: white;
 }
 .home-block{
+
     width: 100vw; 
     height: 100vh; 
-    background-color: #303030;
+    background-color: #181818;
     background-image: url(/web/uploads/back.png);
     background-attachment: fixed;
     /*opacity: 0.5;*/
-    
+    /*font-family: 'masson';*/
     background-blend-mode: color-dodge;
     background-repeat: no-repeat;
 

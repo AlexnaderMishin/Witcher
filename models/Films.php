@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-use yii\base\Model;
+
 use Yii;
 
 /**
@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string $preview
  * @property string $name
+ * @property string $description
  * @property int $season
  * @property int $seria
  * @property string $place
@@ -30,9 +31,8 @@ class Films extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['preview', 'name', 'season', 'seria', 'place'], 'required'],
-            [['preview', 'place'], 'string'],
-            ['preview', 'file', 'extensions' => 'png, jpg', 'maxSize' => 1024 * 1024 * 2, 'message' => 'Такой пользователь уже существует!'],
+            [['preview', 'name', 'description', 'season', 'seria', 'place'], 'required'],
+            [['preview', 'description', 'place'], 'string'],
             [['season', 'seria'], 'integer'],
             [['name'], 'string', 'max' => 255],
         ];
@@ -47,6 +47,7 @@ class Films extends \yii\db\ActiveRecord
             'id' => 'ID',
             'preview' => 'Preview',
             'name' => 'Name',
+            'description' => 'Description',
             'season' => 'Season',
             'seria' => 'Seria',
             'place' => 'Place',

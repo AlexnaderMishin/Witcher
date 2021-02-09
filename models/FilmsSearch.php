@@ -18,7 +18,7 @@ class FilmsSearch extends Films
     {
         return [
             [['id', 'season', 'seria'], 'integer'],
-            [['preview', 'name', 'place'], 'safe'],
+            [['preview', 'name', 'description', 'place'], 'safe'],
         ];
     }
 
@@ -65,6 +65,7 @@ class FilmsSearch extends Films
 
         $query->andFilterWhere(['like', 'preview', $this->preview])
             ->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'place', $this->place]);
 
         return $dataProvider;

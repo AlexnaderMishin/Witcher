@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'preview:ntext',
             'name',
+            'description:ntext',
             'season',
             'seria',
             'place:ntext',

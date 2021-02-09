@@ -21,9 +21,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name') ?>
 
+    <?= $form->field($model, 'description') ?>
+
     <?= $form->field($model, 'season') ?>
 
-    <?= $form->field($model, 'seria') ?>
+    <?php // echo $form->field($model, 'seria') ?>
 
     <?php // echo $form->field($model, 'place') ?>
 

@@ -6,7 +6,7 @@ $this->registerCssFile("/web/css/watch.css");
 	<!-- main block -->
 	<div class="header-block">
 		<div class="watch-block">
-			<div class="title-block"><h2 style=" color: white; ">2.Начало Конца</h2	></div>
+			<div class="title-block"><h2 style=" color: white; ">2.Начало Конца</h2></div>
 			<div class="description">
 			<div class="display-bloc"><iframe src="https://drive.google.com/file/d/125kf9S2Bi9z15pdcVTyIoKNu3l7k59Ah/preview" allowfullscreen="sandbox"  width="100%" height="100%"></iframe></div>
 			<h4 style="color: white;">Враждебные горожане и хитрая ведьма встречают Геральта в Блавикене. Цири выясняет, что ее королевство рушится, потому что Нильфгаард решает завоевать Цинтру.</h4></div>

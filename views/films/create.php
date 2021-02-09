@@ -5,11 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Films */
 
-$this->title = 'Добавить сериал';
+$this->title = 'Create Films';
 $this->params['breadcrumbs'][] = ['label' => 'Films', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="films-create" style="margin-top: 5%;">
+<div class="films-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

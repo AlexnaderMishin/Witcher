@@ -12,7 +12,7 @@ $this->registerJsFile('/web/js/main.js');
 <!-- Главный блок с описанием -->
 <div class="home-block">
 	<div class="desk-block">
-		<h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px;">THE <span class="redWord" style="color: #B33939;">WITCHER</span></h1>
+		<h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px; font-family: 'masson';">THE <span class="redWord" style="color: #B33939;">WITCHER</span></h1>
 		<p class="desk-seria" style="color: white; font-size: 18px;">Геральт из Ривии мутировавший охотник на монстров по<br> найму, отправляется навстречу своей судьбе в неспокойном<br> мире, где люди часто оказываются более злыми, чем звери.</p><br>
 		<p class="desk-cast" style="color: white; font-size: 16px;">В ролях: Генри Кавилл, Аня Чалотра, Фрейа Аллан</p>
 		<p class="desk-cast" style="color: white; font-size: 16px;">Создатели: Лорен Шмидт Хисрич</p>
@@ -44,8 +44,8 @@ foreach ($seria as  $model) {
   echo '
   <div class="cart">
   <div class="image-previews"><a href="'.Url::toRoute('site/watch').'">'.Html::img('@web/uploads/preview/'.$model->preview, ['alt' => 'My logo']).'</a></div>
-  <div class="title-seria"><p>'.$model->name.'</p></div>
-  <div class="desk-seria"><p>'.$model->place.'</p></div>
+  <div class="title-seria"><h4>'.$model->name.'</h4></div>
+  <div class="desk-seria"><p>'.$model->description.'</p></div>
   </div>  
 ';
 }
