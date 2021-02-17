@@ -22,16 +22,13 @@ src: url("/web/assets/497bc4fb/fonts/mason/masson.eot") format('truetype');
   		justify-content: flex-start;	
 	}
 	.cart{
-	
 	/*margin: 0 auto;*/
     max-width: 380px;
     max-height: 380px;
     margin-top: 20px;
     transition: 1s;
-
     /*margin-left: 50px;*/
     color: white;
-
 }
 .image-previews{
 	overflow:hidden;
@@ -41,19 +38,34 @@ src: url("/web/assets/497bc4fb/fonts/mason/masson.eot") format('truetype');
     width: 380px;
     height: 200px; 
     transition: all 1s ease-out
-     
-    
-
-
 }
 .cart img:hover{
 	transform: scale(1.2);
-   	
- 
-
-
+}
+.news-block{
+  margin-top: 60px;
+  width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap:60px;
+      justify-content: center;  
+}
+.new-cart{
+  border: 1px solid white;
+  max-width: 480px;
+  max-height: 480px; 
+}
+.new-cart img{
+  width: 480px;
+  height: 280px; 
+}
+.new-cart h3{
+ color: white;
+ text-align: center; 
 }
 }
+
 @media only screen and (max-width: 1280px){
 .seria-block{
 		/*display: flex;*/

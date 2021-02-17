@@ -1,66 +1,34 @@
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
-.header-block{
-	width: 100vw; 
-    height: 100vh; 
-    background-color: #303030;
-    /*background-image: url(/web/uploads/back.png);*/
-    background-attachment: fixed;
-    /*opacity: 0.5;*/
-    
-    background-blend-mode: color-dodge;
-    background-repeat: no-repeat;
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
 }
-.header-block img{
-width: 100vw;
-height: 100vh;
-}
-.watch-block{
-	margin: 0 auto;
-	margin-top: 10vh;
-	width: 50vw;
-	height: 70vh;
-	/*border: 1px solid white;*/
-}
-.title-block{
-	margin: 0;
-	width: 100%;
-	height: 7vh;
-	/*background-color: black;*/
-	/*border: 1px solid white;*/
-	text-align: left;
 
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
 }
-.display-bloc{
-	width: 100%;
-	height: 55vh;
-	/*background-color: #DFE4EA;*/
-	/*border: 1px solid red;*/
-	border: none;
-}
-.display-bloc iframe{
-border: none;
 
-}
-.button-bloc{
-	display: flex;
-	gap:20%;
-  	justify-content: center;	
-
-}
-.btn button{
-	/*width: 10vw;*/
-	height: 5vh;
-	/*background-color: #B33939;*/
-    background-color:rgb(255,255,255,0);
-
-	/*border: 1px solid white;*/
-	border: none;
-	border-radius: 5px;
-	color: white;
-}
-.next:after{
-	content: ' \003E';
-}
-.prev:before{
-	content: ' \003C';
+#myBtn:hover {
+  background: #ddd;
+  color: black;
 }
