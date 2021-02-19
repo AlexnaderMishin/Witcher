@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'masson';
+    src: url('/web/fonts/mason/mason.ttf') format('truetype');
+    src: url('/web/fonts/mason/mason.eot') format('eot');
+    src: url('/web/fonts/mason/mason.woff') format('woff');
+    font-weight: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'monster';
+    src: url('/web/fonts/monster/monster.ttf') format('truetype');
+    font-weight: normal;
+    font-weight: normal;
+}

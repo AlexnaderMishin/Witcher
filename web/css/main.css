@@ -1,98 +1,79 @@
-@font-face {
-font-family: 'masson';
-src: url("/web/assets/497bc4fb/fonts/mason/masson.woff") format('truetype');
-src: url("/web/assets/497bc4fb/fonts/mason/masson.ttf") format('truetype');
-src: url("/web/assets/497bc4fb/fonts/mason/masson.eot") format('truetype');
- font-style: normal;
- font-weight: normal;
-}
-@media only screen and (min-width: 1920px){
-	.seria-block{
-		/*display: flex;*/
-		margin-top: 60px;
-		
-		margin-left: 110px;
-	}
-	.cart-block{
-		width: 100%;
-  		display: flex;
-  		flex-direction: row;
-  		flex-wrap: wrap;
-  		gap:60px;
-  		justify-content: flex-start;	
-	}
-	.cart{
-	/*margin: 0 auto;*/
-    max-width: 380px;
-    max-height: 380px;
-    margin-top: 20px;
-    transition: 1s;
-    /*margin-left: 50px;*/
+/* Стандарт */
+body{
+  margin: 0;
+  padding: 0;
     color: white;
-}
-.image-previews{
-	overflow:hidden;
-}
-.cart img{
-	/*overflow:hidden;*/
-    width: 380px;
-    height: 200px; 
-    transition: all 1s ease-out
-}
-.cart img:hover{
-	transform: scale(1.2);
-}
-.news-block{
-  margin-top: 60px;
-  width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap:60px;
-      justify-content: center;  
-}
-.new-cart{
-  border: 1px solid white;
-  max-width: 480px;
-  max-height: 480px; 
-}
-.new-cart img{
-  width: 480px;
-  height: 280px; 
-}
-.new-cart h3{
- color: white;
- text-align: center; 
-}
-}
+    background-color: #3D3D3D;
 
-@media only screen and (max-width: 1280px){
-.seria-block{
-		/*display: flex;*/
-		margin-top: 60px;
-		margin-left:105px;
-	}
-	.cart-block{
-		width: 100%;
-  		display: flex;
-  		flex-direction: row;
-  		flex-wrap: wrap;
-  		gap:30px;
-  		justify-content: flex-start;	
-	}
-	.cart{
+    /*font-family: 'masson';*/
+    font-family: 'monster';
 
-	/*margin: 0 auto;*/
-    max-width: 520px;
-    max-height: 100%;
-    margin-top: 10px;
-    /*margin-left: 50px;*/
-   
+}
+body p{
+  font-size: 18px;
+}
+.header{
+    height: 100vh; 
+    color: white;
     
+    background-image: url(/web/uploads/back1.png);
+    background-attachment: fixed;
+    /*opacity: 0.5;*/
+    /*font-family: 'masson';*/
+    
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.header__image{
+    height: 100vh; 
+    background: rgba(61, 61, 61, 0.8);
+    /*filter: alpha(Opacity=70); /* Прозрачность в IE */*/
+    background-blend-mode: color-dodge;
+}
+.menu__logout{
+
+  border: none;
+  background: rgba(61, 61, 61, 0);
+  font-size: 18px;
+    /*display: inline-block;*/
+    background-position: center bottom;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu__logout:hover{
+    transition: 0.5s;
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
     color: white;
 }
-.cart img{
-    width: 520px;
-    height: 260px; 
+
+/* первая секция */
+
+.content{
+  margin-top: 50px;
 }
+.card{
+  max-width: 30vw;
+  /*max-height: 40vh;*/
+  background: rgba(61, 61, 61, 0);
+  border: none;
+  overflow: hidden;
+  /*text-align: center;*/
+}
+.card img{
+  width: 100%;
+  transition: 1s;
+}
+.card a{
+  overflow: hidden;
+}
+.card img:hover{
+  transition: 1s;
+
+  transform: scale(1.2);
+}
+.card{
+  margin-top: 50px;
 }

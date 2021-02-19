@@ -1,102 +1,88 @@
-@font-face {
-font-family: 'masson';
-src: url("/web/assets/497bc4fb/fonts/mason/masson.woff") format('truetype');
-src: url("/web/assets/497bc4fb/fonts/mason/masson.ttf") format('truetype');
-src: url("/web/assets/497bc4fb/fonts/mason/masson.eot") format('truetype');
- font-style: normal;
- font-weight: normal;
-}
- body{
-    margin: 0 auto;
-    padding: 0 auto;
-    background-color: #181818;
-} 
-/*.container-fluid{
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-}*/
-
-.navbar-main{ 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; 
-
-    height: 60px;
-    background-color:rgb(255,255,255,0);
-}
-/* Навгация */
-.nav{
-    margin-top: 10px;
-    margin-right: 20px;
-
-}
-.navbar-brand{
-    margin-top: -10px;
-    
-
-}
-.nav-link{    
-    color: #DFE4EA;
-    text-decoration: none;
-    transition:all 0.3s ease-out;
-   
-}
-
-
-.nav-link:hover{
-    color: red;
-    text-decoration: none;
-    transition:0.5s ease-in-out;   
-}
-label{
+/*Стандарты*/
+body{
     color: white;
-}
-.home-block{
+    background-color: #3D3D3D;
 
-    width: 100vw; 
+    /*font-family: 'masson';*/
+    font-family: 'monster';
+
+}
+ul, li{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-size: 18px;
+}
+/*Первая секция*/
+.header{
     height: 100vh; 
-    background-color: #181818;
-    background-image: url(/web/uploads/back.png);
+    color: white;
+    
+    background-image: url(/web/uploads/back1.png);
     background-attachment: fixed;
     /*opacity: 0.5;*/
     /*font-family: 'masson';*/
-    background-blend-mode: color-dodge;
+    
     background-repeat: no-repeat;
     z-index: 1;
-
 }
-/*.image-block{
-
-    width: 100vw; 
+.header__image{
     height: 100vh; 
-    background-color: #181818;
-    z-index: 2;
-    background-attachment: fixed;
-    opacity: 0.5;
-    font-family: 'masson';
+    background: rgba(61, 61, 61, 0.8);
+    /*filter: alpha(Opacity=70); /* Прозрачность в IE */*/
     background-blend-mode: color-dodge;
-    background-repeat: no-repeat;
-
-}*/
-.desk-block{
-   /* width: 100%;
-    height: 15em;*/
-    margin-left: 40px;
-    margin-top: calc(100% - 80%);
 }
 
-.desk-block button{
-    margin-top: 10px;
-    width: 220px;
+.menu{
+    margin-top: 2vh;
 }
+.menu__item{
 
+    margin: 0 15px;
+    /*margin-top: 2vh;*/
 
-h1,p{
+}
+.menu__item a{
+    font-size: 18px;
+    /*display: inline-block;*/
+    background-position: center bottom;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu__item a:hover{
+    transition: 0.5s;
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
     color: white;
 }
+/*Вторая секция, описание*/
+.offer{
+    width: 30vw;
+    margin-left: 2vw;
+    margin-top: 27vh;
+}
 
-/* Главная страница */
+.offer__intro{
+    width: 27vw;
+}
+.role{
+    margin-top: 3em;
+}
+.offer__button{
+    margin-top: 20px;
+    /*width: 310px;*/
+    width: 16vw;
+    height: 50px;
+    background-color: #B33939;
+    font-size: 16px;
 
-
+    color: white;
+    font-family: 'masson';
+    letter-spacing: 5px;
+    border-radius: 5px;
+    border: none;
+}
