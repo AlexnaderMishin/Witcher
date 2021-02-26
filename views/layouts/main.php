@@ -30,9 +30,11 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+<div class="container-fluid">
+<div class="row">
+<?= $content ?>
 <!-- navbar -->
-<header id="header" class="header">
-    <div class="header__image">
+
         <div class="container-fluid">
         <div class="row">
            
@@ -44,7 +46,7 @@ AppAsset::register($this);
                     echo '<li class="menu__item">
                         <a href="'.Url::toRoute('site/login').'">Войти</a>
                     </li>';
-                    }else{
+                    }elseif(Yii::$app->user->identity->admin == 0){
                         echo  
                         '
                     <li class="menu__item">
@@ -56,7 +58,26 @@ AppAsset::register($this);
                     <li>'
                         . Html::beginForm(['/site/logout'], 'post')
                         . Html::submitButton(
-                        'Выход (' . Yii::$app->user->identity->username . ')',
+                        'Выход',
+                        ['class' => 'menu__logout']
+                        )
+                        . Html::endForm()
+                    .'</li>';
+                    }
+                    if(Yii::$app->user->identity->admin == 1){
+                         echo  
+                        '
+                    <li class="menu__item">
+                        <a href="'.Url::home().'">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="'.Url::toRoute('admin/').'">Управление</a>
+                    </li>
+
+                    <li>'
+                        . Html::beginForm(['/site/logout'], 'post')
+                        . Html::submitButton(
+                        'Выход',
                         ['class' => 'menu__logout']
                         )
                         . Html::endForm()
@@ -67,28 +88,13 @@ AppAsset::register($this);
                     
                 </ul>
             </nav>
-        </div>
-        </div>
-        <div class="row">
-            <div class="offer">
-                
-                <h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px; font-family: 'masson';">THE <span class="redWord" style="color: #B33939; font-family: 'masson';">WITCHER</span></h1>
-                <div class="offer__intro">
-                    <p class="offer__desk">Геральт из Ривии мутировавший охотник на монстров по найму, отправляется навстречу своей судьбе в неспокойном мире, где люди часто оказываются более злыми, чем звери.</p>
-                    <p class="role">В ролях: Генри Кавилл, Аня Чалотра, Фрейа Аллан</p>
-                    <p class="offer__role2">Создатели: Лорен Шмидт Хиссрич</p>
-                    <button type="button" class="offer__button" onclick="MyScroll()">СМОТРЕТЬ ОНЛАЙН</button>
-                </div>
+        
             </div>
         </div>
     </div>
-    </div>
-    
-</header>
 
-<div class="container-fluid">
-<div class="row">
-<?= $content ?>
+
+
 </div>
 </div>
 

@@ -1,11 +1,13 @@
-.control-block{
+p{
+	color: black;
+}
+.panel{
+width: 80vw;
+/*background-color: black;*/
 margin: 0 auto;
 margin-top: 5%;	
-}
 
-.news, .seria{
-	display: inline-block;
-	width: 500px;
-	height: 400px;
-	background-color: #F1F2F6;
+}
+.stat__user{
+	background-color: black;
 }

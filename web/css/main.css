@@ -12,7 +12,10 @@ body{
 body p{
   font-size: 18px;
 }
+/*Первая секция*/
 .header{
+  z-index: 1;
+    width: 100vw;
     height: 100vh; 
     color: white;
     
@@ -22,7 +25,9 @@ body p{
     /*font-family: 'masson';*/
     
     background-repeat: no-repeat;
-    z-index: 1;
+    /*z-index: 1;*/
+    border-bottom: 2px solid red;
+
 }
 .header__image{
     height: 100vh; 
@@ -30,29 +35,38 @@ body p{
     /*filter: alpha(Opacity=70); /* Прозрачность в IE */*/
     background-blend-mode: color-dodge;
 }
-.menu__logout{
-
-  border: none;
-  background: rgba(61, 61, 61, 0);
-  font-size: 18px;
-    /*display: inline-block;*/
-    background-position: center bottom;
-    color: white;
-    font-weight: 300;
-    text-decoration: none;
-    transition: 0.5s;
+.offer{
+    width: 30vw;
+    margin-left: 2vw;
+    margin-top: 27vh;
 }
-.menu__logout:hover{
-    transition: 0.5s;
-    padding-bottom: 5px;
-    border-bottom: 1px solid red;
+
+.offer__intro{
+    width: 27vw;
+}
+.role{
+    margin-top: 3em;
+}
+.offer__button{
+    margin-top: 20px;
+    /*width: 310px;*/
+    width: 16vw;
+    height: 50px;
+    background-color: #B33939;
+    font-size: 16px;
+
     color: white;
+    font-family: 'masson';
+    letter-spacing: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
 /* первая секция */
 
 .content{
   margin-top: 50px;
+  /*border-bottom: 2px solid white;*/
 }
 .card{
   max-width: 30vw;
