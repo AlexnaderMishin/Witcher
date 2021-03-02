@@ -137,9 +137,13 @@ public function actionNews(){
 }
 // стрница просмота
 public function actionWatch(){
-    $film = films::find()->all();
+    $id = $_GET['id'];
+    $film = films::find()->where('id = :id', [':id' => $id])->all();
+    // $customers = Customer::find()->where('age>30')->all();
     return $this->render('watch', [
         'seria' => $film,
+        
+        
     ]);
     
 }
