@@ -14,10 +14,10 @@ $this->registerJsFile('/web/js/main.js');
     <div class="header__image">
         <div class="container-fluid">
         	<div class="row">
-        		<div class="offer">
+        		<div style="margin-top: 27vh;" class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                 
                 <h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px; font-family: 'masson';">THE <span class="redWord" style="color: #B33939; font-family: 'masson';">WITCHER</span></h1>
-                <div class="offer__intro">
+                <div class="col-sm-6 col-md-6 col-lg-10 col-xl-8">
                     <p class="offer__desk">Геральт из Ривии мутировавший охотник на монстров по найму, отправляется навстречу своей судьбе в неспокойном мире, где люди часто оказываются более злыми, чем звери.</p>
                     <p class="role">В ролях: Генри Кавилл, Аня Чалотра, Фрейа Аллан</p>
                     <p class="offer__role2">Создатели: Лорен Шмидт Хиссрич</p>
@@ -34,7 +34,10 @@ $this->registerJsFile('/web/js/main.js');
 
 <section class="content" id="content">
 	<div class="container-fluid">
+        
+
 		<p style="font-size: 24px; margin-top: 10px;">Эпизоды | <span style="color: #B33939;">Ведьмак</span></p>
+        <p style="font-size: 18px; margin-top: 10px;">Сезон | <span>1</span></p>
 		<div class="row">
 
 			<?php
