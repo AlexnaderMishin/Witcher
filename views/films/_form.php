@@ -22,7 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'seria')->textInput() ?>
 
-    <?= $form->field($model, 'place')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'place')->fileInput(['rows' => 6]) ?>
+    
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

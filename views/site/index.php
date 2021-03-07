@@ -43,7 +43,7 @@ $this->registerJsFile('/web/js/main.js');
 			<?php
             foreach ($seria as  $model) {
                 echo'
-                <div class="col-4 col-sm-4 col-md-3 col-lg-3">
+                <div class="col-3">
 			     <div class="card">
 			     <a  href="'.Url::toRoute(['site/watch', 'id'=> $model->id]).'">'.Html::img('@web/uploads/preview/'.$model->preview, ['alt' => 'My logo']).'</a>
                             <h3>'.$model->name.'</h3>

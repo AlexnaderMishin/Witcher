@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignUp;
 use app\models\Posts;
+use app\models\FilmComments;
 use app\models\Films;
 
 class SiteController extends Controller
@@ -139,7 +140,8 @@ public function actionNews(){
 public function actionWatch(){
     $id = $_GET['id'];
     $film = films::find()->where('id = :id', [':id' => $id])->all();
-    // $customers = Customer::find()->where('age>30')->all();
+    
+
     return $this->render('watch', [
         'seria' => $film,
         
@@ -147,4 +149,5 @@ public function actionWatch(){
     ]);
     
 }
+    
 }
