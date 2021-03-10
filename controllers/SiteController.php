@@ -66,8 +66,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $film = films::find()->all();
+        $news = posts::find()->all();
         return $this->render('index', [
         'seria' => $film,
+        'posts' => $news,
     ]);
         
     }
@@ -140,10 +142,11 @@ public function actionNews(){
 public function actionWatch(){
     $id = $_GET['id'];
     $film = films::find()->where('id = :id', [':id' => $id])->all();
-    
+    $comm = film_comments::find()->all();
 
     return $this->render('watch', [
         'seria' => $film,
+        'comments' => $comm,
         
         
     ]);

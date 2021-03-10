@@ -1,9 +1,9 @@
 /* Стандарт */
 body{
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
     color: white;
-    background-color: #303030;
+    background-color: #181818;
 
     /*font-family: 'masson';*/
     font-family: 'monster';
@@ -12,44 +12,55 @@ body{
 body p{
   font-size: 18px;
 }
-/*Первая секция*/
 .header{
   z-index: 1;
-    width: 100vw;
-    height: 100vh; 
-    color: white;
-    
-    background-image: url(/web/uploads/back1.png);
-    background-attachment: fixed;
-     background-size: cover;
+  width: 100vw;
+  /*height: 100vh;*/
+  overflow: hidden;
+}
+/*Первая секция*/
+.intro{
+  position: relative;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  
 
-    /*opacity: 0.5;*/
-    /*font-family: 'masson';*/
-    
-    background-repeat: no-repeat;
-    /*z-index: 1;*/
-    border-bottom: 2px solid red;
+}
+.intro__media{
+  margin: 0;
+  padding:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.intro:after{
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 
-}
-.header__image{
-    height: 100vh; 
-    background: rgba(61, 61, 61, 0.8);
-    /*filter: alpha(Opacity=70); /* Прозрачность в IE */*/
-    background-blend-mode: color-dodge;
-}
-.col-
-.offer{
-    width: 30vw;
-    margin-left: 2vw;
-    margin-top: 27vh;
+.intro__content{
+  margin-left: 20px;
+  position: absolute;
+  top: 1;
+  left: 5;
+  z-index: 3;
 }
 
-.offer__intro{
-    width: 27vw;
-}
-.role{
-    margin-top: 3em;
-}
 .offer__button{
     margin-top: 20px;
     /*width: 310px;*/
@@ -64,10 +75,10 @@ body p{
     border-radius: 5px;
     border: none;
 }
-
 /* первая секция */
 
 .content{
+  /*z-index: 2;*/
   margin-top: 50px;
   /*border-bottom: 2px solid white;*/
 }
