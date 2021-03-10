@@ -11,8 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignUp;
 use app\models\Posts;
-use app\models\FilmComments;
 use app\models\Films;
+use app\models\FilmComments;
 
 class SiteController extends Controller
 {
@@ -66,10 +66,8 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $film = films::find()->all();
-        $news = posts::find()->all();
         return $this->render('index', [
         'seria' => $film,
-        'posts' => $news,
     ]);
         
     }
@@ -139,18 +137,44 @@ public function actionNews(){
     ]);
 }
 // стрница просмота
-public function actionWatch(){
-    $id = $_GET['id'];
-    $film = films::find()->where('id = :id', [':id' => $id])->all();
-    $comm = film_comments::find()->all();
-
+public function actionWatch($id){
+    // $id = $_GET['id'];
+    $film = films::findOne($id);
+    $newComment = new FilmComments();
+    
+    // поиск комментарий по серии
+    $comments = FilmComments::find()->where(['id_seria' => $id])->all();
+    
+    // передаём параметры
     return $this->render('watch', [
         'seria' => $film,
-        'comments' => $comm,
+        'comments'=>$comments,
+        'newComment'=>$newComment,
         
-        
-    ]);
-    
+    ]);   
 }
-    
+
+
+public function actionSaveComment()
+{
+    // проверка пользователя
+    if(Yii::$app->user->isGuest){
+        return $this->redirect(['/site/login']); // Вроде так. хз точно не помню сам
+
+    }
+    // если в форме что то есть
+    if(Yii::$app->request->isPost){
+        // создаём модель
+        $model = new FilmComments();
+        // загружаем  переданную постом модель
+        $model->load(Yii::$app->request->post());
+        // определяем пользователя
+        $model->id_user = Yii::$app->user->identity->id;
+        // сохраняем 
+        $model->save();
+        // остаёмся на странице 
+        return $this->redirect(Yii::$app->request->referrer);
+    }
+}
+
 }

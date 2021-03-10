@@ -9,9 +9,11 @@ use Yii;
  *
  * @property int $id
  * @property int $id_user
- * @property int $id_season
  * @property int $id_seria
- * @property string $text
+ * @property string $message
+ *
+ * @property Films $seria
+ * @property User $user
  */
 class FilmComments extends \yii\db\ActiveRecord
 {
@@ -29,9 +31,11 @@ class FilmComments extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_user', 'id_season', 'id_seria', 'text'], 'required'],
-            [['id_user', 'id_season', 'id_seria'], 'integer'],
-            [['text'], 'string','required'],
+            [['id_user', 'id_seria', 'message'], 'required'],
+            [['id_user', 'id_seria'], 'integer'],
+            [['message'], 'string'],
+            [['id_seria'], 'exist', 'skipOnError' => true, 'targetClass' => Films::className(), 'targetAttribute' => ['id_seria' => 'id']],
+            [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
         ];
     }
 
@@ -43,9 +47,28 @@ class FilmComments extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'id_user' => 'Id User',
-            'id_season' => 'Id Season',
             'id_seria' => 'Id Seria',
-            'text' => 'Text',
+            'message' => 'Message',
         ];
+    }
+
+    /**
+     * Gets query for [[Seria]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSeria()
+    {
+        return $this->hasOne(Films::className(), ['id' => 'id_seria']);
+    }
+
+    /**
+     * Gets query for [[User]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'id_user']);
     }
 }
