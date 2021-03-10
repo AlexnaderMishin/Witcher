@@ -101,7 +101,7 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 <script>
 function MyScroll(){
-    var content = document.getElementById("content");
+    var content = document.getElementById("scroll");
     content.scrollIntoView({block: "center", behavior: "smooth"});
 }
 </script>

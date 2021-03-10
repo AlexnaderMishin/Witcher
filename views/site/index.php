@@ -15,7 +15,7 @@ $this->registerJsFile('/web/js/main.js');
         <div class="row">
             <div class="intro">
                 <div class="intro__media-video">
-                    <video src="/web/uploads/test.mp4" autoplay muted loop width="100%" height="100%"></video>
+                    <video src="/web/uploads/vid.mp4" autoplay muted loop ></video>
                 </div>
                 <div class="intro__content">
                      <h1 class="Name" style="color: white; font-size: 64px; letter-spacing: 5px; font-family: 'masson';">THE <span class="redWord" style="color: #B33939; font-family: 'masson';">WITCHER</span></h1>
@@ -36,7 +36,7 @@ $this->registerJsFile('/web/js/main.js');
     <div class="container-fluid">
         
 
-        <p style="font-size: 24px; margin-top: 10px;">Эпизоды | <span style="color: #B33939;">Ведьмак</span></p>
+        <p id="scroll" style="font-size: 24px; margin-top: 10px;">Эпизоды | <span style="color: #B33939;">Ведьмак</span></p>
         <p style="font-size: 18px; margin-top: 10px;">Сезон | <span>1</span></p>
         <div class="row">
 
